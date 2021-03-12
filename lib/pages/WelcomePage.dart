@@ -1,3 +1,4 @@
+import 'package:bady_doces/pages/LoginPage.dart';
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -28,18 +29,21 @@ class WelcomePage extends StatelessWidget {
                 ),
               ]
             ),
-            child: FlatButton(onPressed: () => {},
-             child: Text('Entrar',
-              style: TextStyle(
+            child: FlatButton(
+              onPressed: () => {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage() ))
+              },
+              child: Text('Entrar',
+               style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w600,
+               ),
               ),
-            ),
-            color: Colors.white,
-            shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10)
-            ),
-            padding: EdgeInsets.fromLTRB(100, 15, 100, 15), 
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10)
+              ),
+              padding: EdgeInsets.fromLTRB(100, 15, 100, 15), 
             ),
           ),
           SizedBox(
@@ -51,7 +55,7 @@ class WelcomePage extends StatelessWidget {
                 BoxShadow(
                   color: Colors.black.withOpacity(0.5),
                   blurRadius: 10.0,
-                  spreadRadius: 3.0,
+                  spreadRadius: 2.0,
                   offset: Offset(5, 3),
                 ),
               ]
